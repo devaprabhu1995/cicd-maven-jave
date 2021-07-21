@@ -19,5 +19,11 @@ pipeline {
             sh 'mvn install'
             }
         }
+        
+      stage('Deploy'){
+          steps{
+          bat 'mvn deploy'
+          }
+      }
    }
 }
